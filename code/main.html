@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jin Huang" />
+    <title>Digit Recognition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+    <script src="main.js"></script>
+    <script src="predict.js"></script>
+    <script src="data.js"></script>
+    <script src="centralizer.js"></script>
+    <script src="draw.js"></script>
+    <style>
+      #canvas {
+        border: 3px solid #000;
+      }
+
+      #small-canvas {
+        border: 1px solid #000;
+      }
+      body {
+        padding: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvas" width="196" height="196"></canvas>
+      <canvas id="small-canvas" width="28" height="28"></canvas>
+    </div>
+    <div>
+      <button id="clear">Clear</button>
+      <label>Result: </label>
+      <label id="result">Don't Know</label>
+    </div>
+    <div>
+      <label>Is the result correct?</label>
+      <button id="correction">No</button>
+    </div>
+  </body>
+</html>
